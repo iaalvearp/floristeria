@@ -1,0 +1,689 @@
+/*Declaracion de variables*/
+:root {
+    --color-1: rgb(239, 107, 140);
+    --color-2: rgb(240, 124, 137);
+    --color-3: rgb(251, 168, 178);
+    --color-4: hsl(342, 58%, 85%);
+    --color-5: hsl(348, 78%, 91%);
+    --color-dark: #0f0f0f;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+/*Estilos globales*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    letter-spacing: 0.05rem;
+    /*background-color: #EDE1E1;*/
+}
+
+/*Estilos del encabezado (Header)*/
+.header {
+    height: 16rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.7rem;
+} 
+
+.header__logo {
+    border-radius: 50%;
+    height: 50%;
+    margin: 2rem auto 0.5rem auto;
+}
+
+.header__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 100%;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+}
+
+.header__text {
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+.header__line {
+    width: 3rem;
+    height: 0.12rem;
+    background-color: var(--color-dark);
+}
+
+.header__social_links {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2rem;
+	width: 100%;
+    gap: 2rem;
+}
+
+.social_link {
+    height: 100%;
+    width: 2rem;
+	transition: 0.35s;
+    padding: 0 0 0.4rem 0;
+    cursor: pointer;
+}
+
+.social_link:hover {
+    transform: translateY(-8%);
+    
+}
+
+/* Estilos del Menu (nav)*/
+.nav {
+    background: var(--color-5);
+    height: 4rem;
+    border-top: 0.1rem solid var(--color-4);
+    border-bottom: 0.1rem solid var(--color-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 0.8rem 0;
+}
+
+.nav__group {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav__links {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.nav__links:hover {
+    color: var(--color-1);
+}
+
+.nav__line {
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--color-1);
+    transition: all 0.3s ease;
+}
+
+.nav__links:hover+.nav__line {
+    width: 100%;
+}
+
+/* Estilos de la portada (hero)*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: url(../img/portada.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__square {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 8.5rem auto;
+    gap: 1.2rem;
+    height: 15rem;
+    width: 30rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color:hsla(342, 58%, 85%, 0.5);
+    transition: all 0.3s ease;
+}
+
+.hero__square:hover {
+    box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate3d(7, 40, 20, 13deg);
+}
+
+.hero__title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--color-1);
+}
+
+.hero__text {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Estilos de servicios (section) */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+}
+
+.about__title {
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem 0 0.3rem 0;
+}
+
+.about__line {
+    width: 2.5rem;
+    height: 0.12rem;
+    background-color: var(--color-dark);
+    margin: 0.5rem 0;
+}
+
+.about__text {
+    line-height: 1.5rem;
+    margin: 0 0 1rem 0;
+    width: 80%;
+}
+
+.about__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2rem auto 6rem auto;
+    width: 100%;
+}
+
+.about__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    transition: all 0.3s ease;
+    border-left: 0.05rem solid rgba(251, 168, 178, 0.8);
+    border-right: 0.05rem solid rgba(251, 168, 178, 0.8);
+    border-bottom: 0.05rem solid rgba(251, 168, 178, 0.8);
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin: 1rem;
+}
+
+.about__group:hover {
+    box-shadow: 0.5rem 0.5rem 2rem rgba(251, 168, 178, 0.8);
+	transform: translateY(-3%);
+}
+
+.about__group_img{
+    width: 100%;
+    height: 10rem;
+    background: url(../img/tarjeta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.about__group_img1{
+    width: 100%;
+    height: 10rem;
+    background: url(../img/tarjeta1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+.about__group_img2{
+    width: 100%;
+    height: 10rem;
+    background: url(../img/tarjeta2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.about__div {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 0.5rem 0;
+}
+
+.about__group_title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0.3rem 0 0.3rem 0;
+    color: var(--color-dark);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.about__group_title:hover {
+    color: var(--color-1);
+}
+
+.about__group_line {
+    width: 0;
+    height: 0.3rem;
+    background-color: var(--color-1);
+    transition: all 0.3s ease;
+}
+
+.about__group_title:hover+.about__group_line {
+    width: 100%;
+}
+
+.about__group_text {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.about__final_line {
+    width: 25%;
+    height: 0.12rem;
+    background-color: var(--color-dark);
+    margin: 2rem 0 4rem 0px;
+}
+
+/* Estilos de Shop */
+.shop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop__title {
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem 0 0.3rem 0;
+}
+
+.shop__line {
+    width: 2rem;
+    height: 0.12rem;
+    background-color: var(--color-dark);
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.shop__product {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.shop__cards {
+    position: relative;
+    height: 30rem;
+    width: 20rem;
+    transform-style: preserve-3d;
+}
+
+.shop__face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: 1.2s ease-in-out;
+    transform: perspective(40rem) rotateY(0deg);
+    backface-visibility: hidden;    
+}
+
+.shop__face.front {
+    background: url(../img/servicios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.one{
+    background: url(../img/servicios1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.two {
+    background: url(../img/servicios2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.three {
+    background: url(../img/servicios3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.four {
+    background: url(../img/servicios4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.five {
+    background: url(../img/servicios5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.six {
+    background: url(../img/servicios6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.shop__face.front.seven {
+    background: url(../img/servicios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.shop__cards:hover .shop__face.front {
+    
+    transform: perspective(40rem) rotateY(180deg);
+}
+
+.shop__face.back {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transform: perspective(40rem) rotateY(180deg);
+    background: url(../img/portada.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.shop__cards:hover .shop__face.back {
+    transform: perspective(40rem) rotateY(360deg);
+}
+
+.shop__back_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop__back_img {
+    background: url(../img/servicios.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.one {
+    background: url(../img/servicios1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.two {
+    background: url(../img/servicios2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.three {
+    background: url(../img/servicios3.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.four {
+    background: url(../img/servicios4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.five {
+    background: url(../img/servicios5.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.six {
+    background: url(../img/sin_fondo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+.shop__back_img.seven {
+    background: url(../img/servicios.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 20rem;
+    height: 15rem;
+}
+
+.shop__back_title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 0.7rem 0 0.2rem 0;
+    transform: perspective(40rem) translateZ(4rem);
+}
+
+.shop__back_list {
+    margin: 1rem auto;
+}
+
+.shop__back_item {
+    line-height: 1.2rem;
+}
+
+.shop__back_buy {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.shop__back_price {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.shop__price_span {
+    font-weight: 700;
+}
+
+.shop__btn {
+    border: 0;
+    height: 3rem;
+    width: 5rem;
+    cursor: pointer;
+    background-color: rgb(251 168 178 / 60%);
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.shop__btn:hover {
+    box-shadow: 0.2rem 0.2rem 0.5rem var(--color-dark);
+}
+
+.shop__final_line {
+    width: 25%;
+    height: 0.12rem;
+    background-color: var(--color-dark);
+    margin: 3rem 0 4rem 0px;
+}
+
+/* Estilos del formulario (form) */
+
+.form_bg {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/portada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.form_title {
+	font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 2.5rem 0;
+}
+
+#form {
+	background: rgb(251 168 178 / 30%);
+    width: 50%;
+    margin: 4.5rem auto;
+    border-radius: 1rem;
+    color: var(--color-dark);
+}
+
+.form {
+	width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_inputs {
+	position: relative;
+    margin: 2rem 0;
+}
+
+.input_form {
+	background: none;
+	color: rgb(15 15 15 / 60%);
+	font-size: 1.8rem;
+	padding: 1rem 1rem 1rem 0.5rem;
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 0.05rem solid hsl(19, 89%, 63%, 0.5);
+    text-align: center;
+}
+
+.input_form:focus {
+	outline: none;
+	color: var(--color-dark);
+}
+
+.label_form {
+	color: rgb(15 15 15 / 50%);
+	font-size: 1.5rem;
+	position: absolute;
+	left: 0.5rem;
+	top: 1rem;
+	transition: 0.5s ease all;
+	pointer-events: none;
+}
+
+.input_form:focus~.label_form, .input_form:valid~.label_form {
+	top: -1.4rem;
+	font-size: 1.2rem;
+	color: var(--color-2)
+}
+
+ .form_bar {
+	 position: relative;
+	 display: block;
+	 width: 100%;
+ }
+
+ .form_bar::before {
+    content: "";
+    height: 0.25rem;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: var(--color-3);
+    transition: 0.4s ease width;
+    left: 0;
+ }
+
+ .input_form:focus~.form_bar::before {
+	width: 100%;
+ }
+
+ .form_textarea {
+    width: 50%;
+    min-width: 20rem;
+    max-width: 22rem;
+    min-height: 12rem;
+    max-height: 15rem;
+    color: var(--color-dark);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 0.1rem solid var(--color-3);
+ }
+
+ .form_textarea:focus-visible {
+    border: 0.1rem solid var(--color-3);
+ }
+
+ .form__btn {
+	font-size: 1.2rem;
+	background: rgb(251 168 178 / 60%);
+	border: none;
+	display: block;
+	width: 60%;
+	margin: 1rem auto;
+	color: var(--color-dark);
+	height: 4rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.form__btn:hover {
+	box-shadow: 0.2rem 0.2rem 0.5rem var(--color-dark);
+}
