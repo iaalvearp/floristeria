@@ -1,13 +1,9 @@
 <?php
 
-$name = $_POST['name'];
 $email = $_POST['email'];
-$text = $_POST['msg'];
 
 // Cuerpo tentativo del mensaje
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $email . ",\r\n";
-$mensaje .= "Su mensaje es: " . $text . ",\r\n";
+$mensaje .= "El e-mail del nuevo suscriptor es: " . $email . ",\r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 
 // Establecer destinatario y referencia del mensaje

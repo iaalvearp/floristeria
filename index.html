@@ -29,6 +29,7 @@
     </header>
     <nav class="nav">
         <div class="nav__container">
+            <img src="assets/menu.png" class= "nav__logo_mobile" alt="logo-img">
             <div class="nav__group">
                 <a href="#" class="nav__links">
                     Home
@@ -89,10 +90,9 @@
             <div class="about__group">
                 <span class="about__group_img"></span>
                 <div class="about__div">
-                    <a href="#" class="about__group_title">
+                    <span class="about__group_title">
                         About
-                    </a>
-                    <span class="about__group_line"></span>
+                    </span>
                 </div>
                 <p class="about__group_text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos totam laudantium reiciendis!
@@ -103,10 +103,9 @@
             <div class="about__group">
                 <span class="about__group_img1"></span>
                 <div class="about__div">
-                    <a href="#" class="about__group_title">
+                    <span class="about__group_title">
                         Services
-                    </a>
-                    <span class="about__group_line"></span>
+                    </>
                 </div>
                 <p class="about__group_text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos totam laudantium reiciendis!
@@ -117,10 +116,9 @@
             <div class="about__group">
                 <span class="about__group_img2"></span>
                 <div class="about__div">
-                    <a href="#" class="about__group_title">
+                    <span class="about__group_title">
                         More Info
-                    </a>
-                    <span class="about__group_line"></span>
+                    </>
                 </div>
                 <p class="about__group_text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos totam laudantium reiciendis!
@@ -316,32 +314,61 @@
         </div>
         <span class="shop__final_line"></span>
     </section>
-    <section class="media form_bg">
-        <form action="form.php" method="POST" id="form">
-            <div class="form">
-                <h1 class="form_title">
-                    Contact Us
-                </h1>
-                <div class="form_inputs">
-                    <input type="text" name="name" id="name" class="input_form" required><span class="form_bar"></span>
-                    <label class="label_form" for="">Name</label>
+    <footer class="footer" id="footer">
+        <div class="footer__main_div">
+            <div class="footer__container social">
+                <h3 class="footer__social_title">
+                    Follow Us
+                </h3>
+                <div class="footer__div_social">
+                    <a href="#" class="footer__social_link">
+                        <img src="assets/fb-logo.svg" alt="" class="footer__social_img">
+                    </a>
+                    <a href="#" class="footer__social_link">
+                        <img src="assets/tw-logo.svg" alt="" class="footer__social_img">
+                    </a>
+                    <a href="#" class="footer__social_link">
+                        <img src="assets/ig-logo.svg" alt="" class="footer__social_img">
+                    </a>
+                    <a href="#" class="footer__social_link">
+                        <img src="assets/tg-logo.svg" alt="" class="footer__social_img">
+                    </a>
                 </div>
-                <div class="form_inputs">
-                    <input type="email" name="email" id="email" class="input_form" required><span
-                        class="form_bar"></span>
-                    <label class="label_form" for="">E-mail</label>
-                </div>
-                <textarea name="msg" id="msg" class="form_textarea" cols="20" rows="10"
-                    placeholder="Your message here..."></textarea>
-                <button class="form__btn" type="submit">
-                    Enviar
-                </button>
             </div>
-        </form>
-    </section>
-    <footer class="foter" id="footer">
 
+            <span class="footer__bar"></span>
+    
+            <div class="footer__container legal">
+                <h2 class="footer__legal_title">
+                    Legal
+                </h2>
+                <div class="footer__div_legal">
+                    <a href="#" class="footer__legal_link">Legal Terms</a>
+                    <a href="#" class="footer__legal_link">Terms & Conditions</a>
+                    <a href="#" class="footer__legal_link">Cookies</a>
+                </div>
+            </div>
+
+            <span class="footer__bar"></span>
+    
+            <form class="footer__container form" action="form.php" method="POST" id="form">
+                <div class="footer__form">
+                    <h2 class="footer__form_title">
+                        Subscribe!
+                    </h2>
+                    <div class="footer__form_inputs">
+                        <input type="email" name="email" id="email" class="footer__input_form" required>
+                        <label class="footer__label_form" for="">E-mail</label>
+                    <button class="form__btn" type="submit">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
     </footer>
+    <span class="copyright">
+        All Rigths Reserved &copy; | 2022 Designed by<a class="copyright__link" href="http://github.com/iaalvearp" target="_blank" rel="noopener noreferrer"> @AlPes</a>
+    </span>
 
 
     <script src="./scripts/script.js"></script>
